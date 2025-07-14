@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body class="bg-blue-950 text-white">
+    <div
+      class="flex flex-col items-center w-[80%] md:w-[50%] mt-8 mx-auto gap-10"
+    >
+      <h1 class="font-bold text-4xl">To Do List</h1>
+      <div
+        class="flex flex-col items-center justify-center w-full bg-white text-black rounded-lg shadow-lg p-5"
+      >
+        <!-- header for filtering the tasks -->
+        <header class="text-center flex flex-col gap-5">
+          <h2 class="font-bold text-3xl">Tasks</h2>
+
+          <div class="inline-flex rounded-md shadow-xs" role="group">
+            <button
+              type="button"
+              class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              Completed
+            </button>
+            <button
+              type="button"
+              class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+            >
+              Active
+            </button>
+          </div>
+        </header>
+
+        <!-- all the tasks shows here -->
+        <main
+          id="task-list"
+          class="w-full flex flex-col items-center justify-start gap-5 my-10 overflow-y-scroll max-h-[300px]"
+        ></main>
+        <!-- footer for adding new tasks -->
+        <footer class="w-full">
+          <form class="max-w-md mx-auto">
+            <div class="relative">
+              <input
+                id="task-input"
+                type="search"
+                class="block w-full p-4 ps-10 text-md text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Add your task here"
+                required
+              />
+              <button
+                id="add-task-btn"
+                type="submit"
+                onclick="addTask()"
+                class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
