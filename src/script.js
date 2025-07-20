@@ -61,7 +61,7 @@ function renderTasks() {
 
     let taskItem = document.createElement("div");
     taskItem.className =
-      "flex flex-row items-center justify-between w-full p-5 bg-gray-700 hover:py-10 transition-all duration-200 ease-in-out";
+      "flex flex-col lg:flex-row gap-y-5 items-center justify-between w-full p-5 bg-gray-700 hover:py-10 transition-all duration-200 ease-in-out";
 
     let taskText = document.createElement("h3");
     taskText.textContent = task.title;
